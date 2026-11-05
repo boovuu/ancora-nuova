@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Ancora Nuova: uvoz, prerada i distribucija ribe. Dimljeni norveški losos, svež losos, orada i brancin, smrznuti plodovi mora. Veleprodaja Beograd.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Ancora Nuova</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: cold-chain "shipping ticket" hero on deep-sea band, then ice-white product sheets with spec rows; content column 1180px */
+:root{
+  --bg:#EDF2F3; --surface:#FFFFFF; --ink:#0D1B22; --muted:#4D6169; --line:#CAD7DB;
+  --accent:#E4683F; --accent-ink:#1A0B05; --sea:#0F3B4C; --on-sea:#EAF3F5; --on-sea-muted:#9FC0CB;
+  --ph-a:#DCE6E9; --ph-b:#D2DEE2;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A151B; --surface:#10212A; --ink:#E4EDEF; --muted:#93A7AE; --line:#223A44;
+  --accent:#F2875E; --accent-ink:#1A0B05; --sea:#0B2A36; --on-sea:#EAF3F5; --on-sea-muted:#8FB1BC;
+  --ph-a:#14303B; --ph-b:#112A34; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A151B; --surface:#10212A; --ink:#E4EDEF; --muted:#93A7AE; --line:#223A44;
+  --accent:#F2875E; --accent-ink:#1A0B05; --sea:#0B2A36; --on-sea:#EAF3F5; --on-sea-muted:#8FB1BC;
+  --ph-a:#14303B; --ph-b:#112A34; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+#site.en .sr,#site:not(.en) .en{display:none}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1;text-wrap:balance;margin:0;text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(2rem,4.5vw,3.2rem)}
+h3{font-size:1.6rem;font-weight:600}
+p{margin:0}
+a{color:inherit}
+.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+section{padding-block:clamp(56px,8vw,96px)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* placeholder notice */
+.notice{background:var(--accent);color:var(--accent-ink);font-family:var(--f-mono);font-size:.75rem;text-align:center;padding-block:6px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--sea);color:var(--on-sea);border-bottom:1px solid rgba(255,255,255,.08)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--sea)}
+.bar{display:flex;align-items:center;gap:24px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:1.5rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.logo svg{width:26px;height:26px;flex:none}
+nav{display:flex;gap:20px;margin-left:auto;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.9rem;color:var(--on-sea-muted)}
+nav a:hover{color:var(--on-sea)}
+.lang{display:flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden;flex:none}
+.lang button{background:none;border:0;color:var(--on-sea-muted);font-family:var(--f-mono);font-size:.75rem;padding:6px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--on-sea);color:var(--sea)}
+@media (max-width:900px){nav{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{background:var(--sea);color:var(--on-sea);padding-block:clamp(48px,7vw,88px) clamp(56px,8vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-grid>*{min-width:0}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem)}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{margin-top:24px;max-width:56ch;color:var(--on-sea-muted);font-size:1.08rem}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:4px;padding:13px 20px;font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:var(--f-body)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn:hover{filter:brightness(1.06)}
+.ticket{border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:24px;background:rgba(255,255,255,.04)}
+.ticket .route{display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:var(--f-display);font-weight:800;font-size:2rem;text-transform:uppercase}
+.ticket .route span.line{flex:1;border-top:2px dashed var(--on-sea-muted);opacity:.6;min-width:20px}
+.ticket dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin:24px 0 0}
+.ticket dt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-sea-muted)}
+.ticket dd{margin:4px 0 0;font-family:var(--f-display);font-weight:600;font-size:1.6rem}
+.ticket .sample{margin-top:20px;font-family:var(--f-mono);font-size:.7rem;color:var(--on-sea-muted)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+
+/* retail strip */
+.retail{padding-block:28px;border-bottom:1px solid var(--line)}
+.retail .row{display:flex;align-items:center;gap:16px 36px;flex-wrap:wrap}
+.retail .names{display:flex;gap:12px 32px;flex-wrap:wrap;font-family:var(--f-display);font-weight:600;font-size:1.5rem;text-transform:uppercase;color:var(--ink)}
+
+/* section heads */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head p{max-width:52ch;color:var(--muted)}
+
+/* products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/3;max-width:100%;background:repeating-linear-gradient(135deg,var(--ph-a) 0 14px,var(--ph-b) 14px 28px);display:flex;align-items:end;padding:14px;color:var(--muted)}
+.ph span{background:var(--surface);padding:4px 8px;border-radius:3px}
+.prod-body{padding:22px;display:flex;flex-direction:column;gap:14px;flex:1}
+.prod-body .origin{color:var(--accent);font-family:var(--f-mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+.prod-body p{color:var(--muted);font-size:.95rem}
+.spec{margin:auto 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;border-top:1px solid var(--line);padding-top:14px}
+.spec dt{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.spec dd{margin:0;font-size:.9rem;font-weight:500;font-variant-numeric:tabular-nums}
+@media (max-width:960px){.products{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.products{grid-template-columns:1fr}}
+
+/* catalog */
+.catalog{background:var(--surface);border-block:1px solid var(--line)}
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg)}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+td.code{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.cat-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:.9rem}
+.toast{font-family:var(--f-mono);font-size:.75rem;color:var(--accent)}
+
+/* wholesale */
+.whole{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.whole>*{min-width:0}
+.cities{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.cities span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem}
+.cities span.main{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.who{margin-top:28px;display:grid;gap:12px}
+.who div{display:flex;gap:12px;align-items:baseline}
+.who div::before{content:"";width:8px;height:8px;background:var(--accent);flex:none;transform:translateY(-1px)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:500}
+input,select,textarea{font:inherit;font-size:.95rem;padding:11px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);width:100%;box-sizing:border-box}
+textarea{min-height:96px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.whole{grid-template-columns:1fr}}
+@media (max-width:480px){.two{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,5vw,72px);align-items:start}
+.about>*{min-width:0}
+.about .text{display:grid;gap:16px;color:var(--muted);max-width:62ch}
+.about .text p:first-child{color:var(--ink);font-size:1.15rem}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--sea);color:var(--on-sea)}
+.contact .eyebrow,.contact .head p{color:var(--on-sea-muted)}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.phone{border-top:2px solid var(--accent);padding-top:16px;display:grid;gap:6px}
+.phone .num{font-family:var(--f-display);font-weight:600;font-size:clamp(1.6rem,3vw,2.1rem);user-select:all;font-variant-numeric:tabular-nums}
+.phone .mono{color:var(--on-sea-muted)}
+.addr{margin-top:40px;display:flex;gap:16px 48px;flex-wrap:wrap;color:var(--on-sea-muted)}
+.addr b{color:var(--on-sea);font-weight:600}
+@media (max-width:760px){.phones{grid-template-columns:1fr}}
+
+footer{padding-block:28px;font-size:.85rem;color:var(--muted)}
+footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s}}
+</style>
+
+</head>
+<body>
+<div id="site">
+<style>
+.hero-photo{margin:0;display:grid;gap:0;border:1px solid rgba(255,255,255,.18);border-radius:6px;overflow:hidden;background:rgba(255,255,255,.04)}
+.hero-photo img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.hero-photo dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin:0;padding:22px}
+.hero-photo dt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-sea-muted)}
+.hero-photo dd{margin:4px 0 0;font-family:var(--f-display);font-weight:600;font-size:1.5rem;line-height:1.1}
+.prod img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;max-width:100%}
+.packs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+.pack{margin:0;background:#0B1418;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.pack img{display:block;width:100%;aspect-ratio:1;object-fit:contain;padding:12px;box-sizing:border-box}
+.pack figcaption{padding:10px 14px 14px;color:#C9D8DD;font-size:.85rem;line-height:1.35}
+@media (max-width:760px){.packs{grid-template-columns:1fr 1fr}}
+.decl-head{margin:40px 0 16px;display:grid;gap:8px}.decl-head p{color:var(--muted);max-width:70ch;font-size:.92rem}
+.decls{display:grid;gap:8px}
+.decl{border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.decl summary{cursor:pointer;padding:14px 18px;display:flex;justify-content:space-between;gap:16px;font-weight:600;list-style:none}
+.decl summary::-webkit-details-marker{display:none}
+.decl summary::after{content:"+";font-family:var(--f-mono);color:var(--accent)}
+.decl[open] summary::after{content:"−"}
+.decl summary .mono{margin-left:auto;color:var(--muted);font-weight:400}
+.decl-body{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;padding:4px 18px 18px}
+.decl-body>*{min-width:0}
+.decl-body .spec{margin:0;border-top:0;padding-top:0}
+table.nutri{min-width:0;font-size:.85rem}table.nutri td,table.nutri th{padding:6px 10px}table.nutri td:last-child{text-align:right}
+@media (max-width:760px){.decl-body{grid-template-columns:1fr}}
+.motto{color:var(--ink)!important;font-weight:600;border-left:3px solid var(--accent);padding-left:14px}
+.tech{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.tech>div{border-top:2px solid var(--accent);padding-top:14px;display:grid;gap:8px}.tech p{color:var(--muted)}
+@media (max-width:760px){.tech{grid-template-columns:1fr}}
+.facts-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}
+.facts-row div{border-top:1px solid var(--line);padding-top:12px}
+.facts-row b{display:block;font-family:var(--f-display);font-size:1.9rem;font-weight:800;line-height:1.1}
+.facts-row span{color:var(--muted);font-size:.88rem}
+@media (max-width:760px){.facts-row{grid-template-columns:1fr 1fr}}
+</style>
+<div class="notice"><span class="sr">PLACEHOLDER · podaci su iz kataloga Ancora Nuova; gradovi, forma i fotografija sveže ribe su još primeri</span><span class="en">PLACEHOLDER · data from the Ancora Nuova catalogue; cities, form and the fresh fish photo are still examples</span></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Ancora Nuova">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="16" cy="6" r="3"/><path d="M16 9v19M9 14h14M5 19c1 6 6 9 11 9s10-3 11-9"/></svg>
+      Ancora Nuova
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <a href="#proizvodi"><span class="sr">Proizvodi</span><span class="en">Products</span></a>
+      <a href="#katalog"><span class="sr">Katalog</span><span class="en">Catalogue</span></a>
+      <a href="#veleprodaja"><span class="sr">Veleprodaja</span><span class="en">Wholesale</span></a>
+      <a href="#tehnologija"><span class="sr">Tehnologija</span><span class="en">Technology</span></a>
+      <a href="#o-nama"><span class="sr">O nama</span><span class="en">About</span></a>
+      <a href="#kontakt"><span class="sr">Kontakt</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Jezik / Language">
+      <button type="button" id="btn-sr" aria-pressed="true">SR</button>
+      <button type="button" id="btn-en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--on-sea-muted)"><span class="sr">Uvoz · prerada · distribucija ribe</span><span class="en">Fish import · processing · distribution</span></p>
+      <h1 style="margin-top:16px"><span class="sr">Norveški losos, <em>dimljen u Beogradu</em></span><span class="en">Norwegian salmon, <em>smoked in Belgrade</em></span></h1>
+      <p class="lead"><span class="sr">Svaka nedelja donosi svež losos iz Norveške i oradu i brancin iz Grčke i Italije. U sopstvenom pogonu dimimo losos klasičnim postupkom, suvim soljenjem. Snabdevamo trgovinske lance, restorane i ribarnice širom Srbije.</span><span class="en">Every week we bring in fresh salmon from Norway and sea bream and sea bass from Greece and Italy. In our own plant we smoke salmon the classic way, dry-salted. We supply retail chains, restaurants and fishmongers across Serbia.</span></p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#veleprodaja"><span class="sr">Upit za veleprodaju</span><span class="en">Wholesale enquiry</span></a>
+        <a class="btn btn-ghost" href="#katalog"><span class="sr">Katalog proizvoda</span><span class="en">Product catalogue</span></a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/dimljenje.jpg" alt="Fileti lososa na rešetki posle dimljenja">
+      <dl>
+        <div><dt><span class="sr">Dimljena riba</span><span class="en">Smoked fish</span></dt><dd><span class="sr">150 t godišnje</span><span class="en">150 t a year</span></dd></div>
+        <div><dt><span class="sr">Hladnjače</span><span class="en">Cold storage</span></dt><dd><span class="sr">600 t smrznute · 50 t sveže</span><span class="en">600 t frozen · 50 t fresh</span></dd></div>
+        <div><dt><span class="sr">Sveža riba</span><span class="en">Fresh fish</span></dt><dd><span class="sr">Svake nedelje</span><span class="en">Every week</span></dd></div>
+        <div><dt><span class="sr">Standardi</span><span class="en">Standards</span></dt><dd>HACCP · IFS Food</dd></div>
+      </dl>
+    </figure>
+  </div>
+</div>
+
+<div class="retail">
+  <div class="wrap row">
+    <span class="eyebrow"><span class="sr">Naš program u delikates odeljenjima</span><span class="en">Our range in the deli counters of</span></span>
+    <div class="names"><span>Delhaize</span><span>Mercator</span><span>Aroma</span><span>Roda</span><span>Idea</span><span>Univer</span></div>
+  </div>
+</div>
+
+<section id="proizvodi">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow"><span class="sr">Asortiman</span><span class="en">Range</span></p><h2 style="margin-top:10px"><span class="sr">Glavni proizvodi</span><span class="en">Core products</span></h2></div>
+      <p><span class="sr">Svaki proizvod ima svoju stranicu sa poreklom, sastavom, pakovanjem i rokom trajanja. Novi proizvodi se dodaju kroz CMS.</span><span class="en">Each product gets its own page with origin, ingredients, packaging and shelf life. New products are added through the CMS.</span></p>
+    </div>
+    <div class="products">
+      <article class="prod">
+        <img src="img/losos-tanjir.jpg" alt="Narezan dimljeni losos sa pomorandžom">
+        <div class="prod-body">
+          <span class="origin"><span class="sr">Norveška · dimljeno u Beogradu</span><span class="en">Norway · smoked in Belgrade</span></span>
+          <h3><span class="sr">Dimljeni losos</span><span class="en">Smoked salmon</span></h3>
+          <p><span class="sr">Hladno dimljen, suvo soljen, narezan. Klasičan, sa čilijem, sa mirođijom i mediterraneo. Toplo dimljen file sa začinskim biljem.</span><span class="en">Cold smoked, dry-salted, sliced. Classic, chili, dill and mediterraneo. Hot smoked fillet with herbs.</span></p>
+          <dl class="spec">
+            <dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>100 g · 200 g</dd>
+            <dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">vakuum · skin pack</span><span class="en">vacuum · skin pack</span></dd>
+            <dt><span class="sr">Rok</span><span class="en">Shelf life</span></dt><dd><span class="sr">45 dana na +4 °C</span><span class="en">45 days at +4 °C</span></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="prod">
+        <div class="ph"><span class="mono"><span class="sr">FOTO · orada i brancin na ledu (nema u katalogu)</span><span class="en">PHOTO · sea bream and bass on ice (not in catalogue)</span></span></div>
+        <div class="prod-body">
+          <span class="origin"><span class="sr">Norveška · Grčka · Italija · sveže</span><span class="en">Norway · Greece · Italy · fresh</span></span>
+          <h3><span class="sr">Sveža riba</span><span class="en">Fresh fish</span></h3>
+          <p><span class="sr">Losos iz Norveške, orada i brancin iz Grčke i Italije. Za ribarnice, restorane i lance.</span><span class="en">Salmon from Norway, sea bream and sea bass from Greece and Italy. For fishmongers, restaurants and chains.</span></p>
+          <dl class="spec">
+            <dt><span class="sr">Dolazak</span><span class="en">Arrivals</span></dt><dd><span class="sr">svake nedelje</span><span class="en">every week</span></dd>
+            <dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">vakuum · MAP · DAR Fresh</span><span class="en">vacuum · MAP · DAR Fresh</span></dd>
+            <dt><span class="sr">Hladnjača</span><span class="en">Storage</span></dt><dd>50 t</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="prod">
+        <img src="img/salata.jpg" alt="Salata sa lososom i paštetom">
+        <div class="prod-body">
+          <span class="origin"><span class="sr">Delikatesi i smrznuto</span><span class="en">Deli and frozen</span></span>
+          <h3><span class="sr">Paštete, burgeri, smrznuti program</span><span class="en">Pâtés, burgers, frozen range</span></h3>
+          <p><span class="sr">Pašteta sa 60% lososa, pašteta od dimljenog lososa, burger od lososa. Smrznuta riba i plodovi mora iz celog sveta.</span><span class="en">Pâté with 60% salmon, smoked salmon pâté, salmon burger. Frozen fish and seafood from around the world.</span></p>
+          <dl class="spec">
+            <dt><span class="sr">Pašteta</span><span class="en">Pâté</span></dt><dd><span class="sr">150 g tegla · 180 dana</span><span class="en">150 g jar · 180 days</span></dd>
+            <dt><span class="sr">Burger</span><span class="en">Burger</span></dt><dd><span class="sr">200 g · −18 °C · 360 dana</span><span class="en">200 g · −18 °C · 360 days</span></dd>
+            <dt><span class="sr">Hladnjača</span><span class="en">Storage</span></dt><dd><span class="sr">600 t smrznute robe</span><span class="en">600 t frozen</span></dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="katalog">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow"><span class="sr">Prodajni katalog</span><span class="en">Sales catalogue</span></p><h2 style="margin-top:10px"><span class="sr">Lista proizvoda</span><span class="en">Product list</span></h2></div>
+      <p><span class="sr">Ista lista je i na sajtu i u PDF-u. Podaci se unose jednom, u CMS.</span><span class="en">The same list appears on the site and in the PDF. Data is entered once, in the CMS.</span></p>
+    </div>
+    <div class="packs">
+      <figure class="pack"><img src="img/losos-chili.jpg" alt="Dimljeni losos čili, pakovanje"><figcaption><span class="sr">Dimljeni losos čili, 100 g</span><span class="en">Smoked salmon chili, 100 g</span></figcaption></figure>
+      <figure class="pack"><img src="img/losos-mirodjija.jpg" alt="Dimljeni losos sa mirođijom, pakovanje"><figcaption><span class="sr">Dimljeni losos sa mirođijom, 100 g</span><span class="en">Smoked salmon dill, 100 g</span></figcaption></figure>
+      <figure class="pack"><img src="img/file-zacinsko-bilje.jpg" alt="Toplo dimljeni file lososa, pakovanje"><figcaption><span class="sr">Toplo dimljeni file sa začinskim biljem, 200 g</span><span class="en">Hot smoked fillet with herbs, 200 g</span></figcaption></figure>
+      <figure class="pack"><img src="img/pasteta.jpg" alt="Pašteta od lososa, tegla"><figcaption><span class="sr">Pašteta od lososa, 150 g</span><span class="en">Salmon pâté, 150 g</span></figcaption></figure>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th><span class="sr">Proizvod</span><span class="en">Product</span></th><th><span class="sr">Vrsta</span><span class="en">Type</span></th><th><span class="sr">Neto</span><span class="en">Net</span></th><th><span class="sr">Pakovanje</span><span class="en">Pack</span></th><th><span class="sr">Rok</span><span class="en">Shelf life</span></th><th><span class="sr">Čuvanje</span><span class="en">Storage</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="sr">Dimljeni losos, narezan</span><span class="en">Smoked salmon slices</span></td><td><span class="sr">hladno dimljen</span><span class="en">cold smoked</span></td><td>100 g</td><td><span class="sr">vakuum</span><span class="en">vacuum</span></td><td><span class="sr">45 dana</span><span class="en">45 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Dimljeni losos, narezan</span><span class="en">Smoked salmon slices</span></td><td><span class="sr">hladno dimljen</span><span class="en">cold smoked</span></td><td>200 g</td><td><span class="sr">vakuum</span><span class="en">vacuum</span></td><td><span class="sr">45 dana</span><span class="en">45 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Dimljeni losos čili</span><span class="en">Smoked salmon chili</span></td><td><span class="sr">hladno dimljen</span><span class="en">cold smoked</span></td><td>100 g</td><td><span class="sr">vakuum</span><span class="en">vacuum</span></td><td><span class="sr">45 dana</span><span class="en">45 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Dimljeni losos sa mirođijom</span><span class="en">Smoked salmon dill</span></td><td><span class="sr">hladno dimljen</span><span class="en">cold smoked</span></td><td>100 g</td><td><span class="sr">vakuum</span><span class="en">vacuum</span></td><td><span class="sr">45 dana</span><span class="en">45 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Dimljeni losos mediterraneo</span><span class="en">Smoked salmon mediterraneo</span></td><td><span class="sr">hladno dimljen</span><span class="en">cold smoked</span></td><td>100 g</td><td><span class="sr">vakuum</span><span class="en">vacuum</span></td><td><span class="sr">45 dana</span><span class="en">45 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">File lososa sa začinskim biljem</span><span class="en">Salmon fillet with herbs</span></td><td><span class="sr">toplo dimljen</span><span class="en">hot smoked</span></td><td>200 g</td><td>skin pack</td><td><span class="sr">45 dana</span><span class="en">45 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Pašteta od dimljenog lososa</span><span class="en">Smoked salmon pâté</span></td><td><span class="sr">riblji namaz</span><span class="en">fish spread</span></td><td>150 g</td><td><span class="sr">tegla</span><span class="en">glass jar</span></td><td><span class="sr">180 dana</span><span class="en">180 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Pašteta od lososa (60%)</span><span class="en">Salmon pâté (60%)</span></td><td><span class="sr">riblji namaz</span><span class="en">fish spread</span></td><td>150 g</td><td><span class="sr">tegla</span><span class="en">glass jar</span></td><td><span class="sr">180 dana</span><span class="en">180 days</span></td><td>+4 °C</td></tr>
+          <tr><td><span class="sr">Burger od lososa</span><span class="en">Salmon burger</span></td><td><span class="sr">smrznut</span><span class="en">frozen</span></td><td>200 g</td><td>skin pack</td><td><span class="sr">360 dana</span><span class="en">360 days</span></td><td>−18 °C</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="decl-head"><h3><span class="sr">Deklaracije proizvoda</span><span class="en">Product specifications</span></h3><p><span class="sr">Poreklo ribe: Norveška. Proizvodi i pakuje Ancora Nuova d.o.o., Mokranjčeva 4, Beograd. Nutritivne vrednosti su prosečne, na 100 g.</span><span class="en">Fish origin: Norway. Produced and packed by Ancora Nuova d.o.o., Mokranjčeva 4, Belgrade. Nutrition values are averages per 100 g.</span></p></div><div class="decls">
+<details class="decl"><summary><span class="sr">Dimljeni losos, narezan</span><span class="en">Smoked salmon slices</span><span class="mono">100 g · 200 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">hladno dimljena riba</span><span class="en">cold smoked fish</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa, morska so, prirodni dim</span><span class="en">Salmon fillet, sea salt, natural smoke</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>100 g · 200 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">vakuum kesa</span><span class="en">vacuum bag</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">45 dana</span><span class="en">45 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">100 g: karton ≈1 kg, 180 kartona po paleti · 200 g: karton ≈2 kg, 84 kartona po paleti</span><span class="en">100 g: carton ≈1 kg, 180 cartons per pallet · 200 g: carton ≈2 kg, 84 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>817,7 kJ / 196,1 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>20,2 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>12,6 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>1,75 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>7,34 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>3,53 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>0,46 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,46 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>2,46 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,73 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,33 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">Dimljeni losos čili</span><span class="en">Smoked salmon chili</span><span class="mono">100 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">hladno dimljena riba</span><span class="en">cold smoked fish</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa, morska so, začini (crvena paprika, čili), prirodni dim</span><span class="en">Salmon fillet, sea salt, spices (red pepper, chili), natural smoke</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>100 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">vakuum kesa</span><span class="en">vacuum bag</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">45 dana</span><span class="en">45 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈1 kg, 180 kartona po paleti</span><span class="en">carton ≈1 kg, 180 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>817,7 kJ / 196,1 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>20,2 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>12,6 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>1,75 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>7,34 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>3,53 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>0,46 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,46 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>2,46 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,73 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,33 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">Dimljeni losos mediterraneo</span><span class="en">Smoked salmon mediterraneo</span><span class="mono">100 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">hladno dimljena riba</span><span class="en">cold smoked fish</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa, morska so, začini (beli luk, vlasac, peršun), prirodni dim</span><span class="en">Salmon fillet, sea salt, spices (garlic, garlic chives, parsley), natural smoke</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>100 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">vakuum kesa</span><span class="en">vacuum bag</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">45 dana</span><span class="en">45 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈1 kg, 180 kartona po paleti</span><span class="en">carton ≈1 kg, 180 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>817,7 kJ / 196,1 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>20,2 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>12,6 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>1,75 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>7,34 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>3,53 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>0,46 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,46 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>2,46 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,73 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,33 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">Dimljeni losos sa mirođijom</span><span class="en">Smoked salmon dill</span><span class="mono">100 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">hladno dimljena riba</span><span class="en">cold smoked fish</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa, morska so, začini (mirođija), prirodni dim</span><span class="en">Salmon fillet, sea salt, spices (dill), natural smoke</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>100 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">vakuum kesa</span><span class="en">vacuum bag</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">45 dana</span><span class="en">45 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈1 kg, 180 kartona po paleti</span><span class="en">carton ≈1 kg, 180 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>817,7 kJ / 196,1 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>20,2 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>12,6 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>1,75 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>7,34 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>3,53 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>0,46 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,46 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>2,46 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,73 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,33 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">File lososa sa začinskim biljem</span><span class="en">Smoked salmon fillet with herbs</span><span class="mono">200 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">toplo dimljena riba</span><span class="en">hot smoked fish</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa, so, smeđi šećer, vlakna graška, začini (crvena paprika, ljutika, crni luk, biber), prirodni dim</span><span class="en">Salmon fillet, salt, brown sugar, pea fibre, spices (red pepper, shallot, onion, pepper), natural smoke</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>200 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">skin pack</span><span class="en">skin pack</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">45 dana</span><span class="en">45 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈0,8 kg, 150 kartona po paleti</span><span class="en">carton ≈0.8 kg, 150 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>749,9 kJ / 179,3 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>22,7 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>9,6 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>1,33 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>8,3 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>2,5 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>0,4 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,4 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>1,7 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,46 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,48 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">Pašteta od dimljenog lososa</span><span class="en">Smoked salmon pâté</span><span class="mono">150 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">riblji namaz</span><span class="en">fish spread</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">Dimljeni file lososa 40%, file lososa 20%, voda, biljno ulje, mlečni protein, biljna vlakna, so, povrće, začini</span><span class="en">Smoked salmon fillet 40%, salmon fillet 20%, water, vegetable oil, milk protein, vegetable fibre, salt, vegetables, spices</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>150 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">staklena tegla</span><span class="en">glass jar</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">180 dana</span><span class="en">180 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈1,2 kg, 100 kartona po paleti</span><span class="en">carton ≈1.2 kg, 100 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>1515,7 kJ / 367,2 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>10,1 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>35,8 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>8,6 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>16 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>11,12 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>1,3 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,1 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>1,4 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,15 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,18 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">Pašteta od lososa</span><span class="en">Salmon pâté</span><span class="mono">150 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">riblji namaz</span><span class="en">fish spread</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa 60%, voda, biljno ulje, sojin protein, biljna vlakna, so, povrće, začini</span><span class="en">Salmon fillet 60%, water, vegetable oil, soy protein, vegetable fibre, salt, vegetables, spices</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Konzumirati hladno</span><span class="en">Consume cold</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>150 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">staklena tegla</span><span class="en">glass jar</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">180 dana</span><span class="en">180 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd>+4 °C</dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈1,2 kg, 100 kartona po paleti</span><span class="en">carton ≈1.2 kg, 100 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>1361,7 kJ / 329,5 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>11,6 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>30,8 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>7,3 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>13 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>10,5 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>1,5 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>1,1 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>1,1 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,13 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,44 g</td></tr></tbody></table></div></details>
+<details class="decl"><summary><span class="sr">Burger od lososa</span><span class="en">Salmon burger</span><span class="mono">200 g</span></summary><div class="decl-body"><dl class="spec"><dt><span class="sr">Grupa</span><span class="en">Group</span></dt><dd><span class="sr">smrznuti riblji proizvod</span><span class="en">frozen fish product</span></dd><dt><span class="sr">Sastojci</span><span class="en">Ingredients</span></dt><dd><span class="sr">File lososa 60%, voda, pahuljice krompira, biljna vlakna, prezle, šećer, začini</span><span class="en">Salmon fillet 60%, water, potato flakes, vegetable fibre, breadcrumbs, sugar, spices</span></dd><dt><span class="sr">Upotreba</span><span class="en">Use</span></dt><dd><span class="sr">Smrznut proizvod pripremati 6 min u tiganju ili na roštilju, po 3 min sa svake strane, na srednjoj temperaturi</span><span class="en">Cook from frozen for 6 min in a pan or on a barbecue, 3 min each side, at medium heat</span></dd><dt><span class="sr">Neto</span><span class="en">Net</span></dt><dd>200 g</dd><dt><span class="sr">Pakovanje</span><span class="en">Pack</span></dt><dd><span class="sr">skin pack</span><span class="en">skin pack</span></dd><dt><span class="sr">Rok trajanja</span><span class="en">Shelf life</span></dt><dd><span class="sr">360 dana</span><span class="en">360 days</span></dd><dt><span class="sr">Čuvanje</span><span class="en">Storage</span></dt><dd><span class="sr">od −18 °C</span><span class="en">from −18 °C</span></dd><dt><span class="sr">Transportno pakovanje</span><span class="en">Shipping</span></dt><dd><span class="sr">karton ≈0,8 kg, 150 kartona po paleti</span><span class="en">carton ≈0.8 kg, 150 cartons per pallet</span></dd></dl><table class="nutri"><thead><tr><th><span class="sr">Na 100 g</span><span class="en">Per 100 g</span></th><th></th></tr></thead><tbody><tr><td><span class="sr">Energetska vrednost</span><span class="en">Energy</span></td><td>426,7 kJ / 101,7 kcal</td></tr><tr><td><span class="sr">Proteini</span><span class="en">Protein</span></td><td>14,5 g</td></tr><tr><td><span class="sr">Masti</span><span class="en">Fat</span></td><td>4,5 g</td></tr><tr><td><span class="sr">— zasićene masne kiseline</span><span class="en">— saturates</span></td><td>0,66 g</td></tr><tr><td><span class="sr">— mononezasićene</span><span class="en">— monounsaturates</span></td><td>2,44 g</td></tr><tr><td><span class="sr">— polinezasićene</span><span class="en">— polyunsaturates</span></td><td>1,32 g</td></tr><tr><td><span class="sr">Ugljeni hidrati</span><span class="en">Carbohydrate</span></td><td>0,8 g</td></tr><tr><td><span class="sr">— šećeri</span><span class="en">— sugars</span></td><td>0,8 g</td></tr><tr><td><span class="sr">So</span><span class="en">Salt</span></td><td>1 g</td></tr><tr><td><span class="sr">Omega-3 ALA</span><span class="en">Omega-3 ALA</span></td><td>0,26 g</td></tr><tr><td><span class="sr">Omega-3 EPA/DHA</span><span class="en">Omega-3 EPA/DHA</span></td><td>0,26 g</td></tr></tbody></table></div></details>
+</div>
+    <div class="cat-foot">
+      <span><span class="sr">9 proizvoda iz kataloga. Sveža i smrznuta riba se dodaju kad stigne cenovnik.</span><span class="en">9 products from the catalogue. Fresh and frozen fish to be added from the price list.</span></span>
+      <span style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <span class="toast" id="pdf-note" hidden><span class="sr">Na pravom sajtu ovo preuzima PDF katalog.</span><span class="en">On the live site this downloads the PDF catalogue.</span></span>
+        <button class="btn btn-primary" type="button" id="pdf-btn"><span class="sr">Preuzmi katalog (PDF)</span><span class="en">Download catalogue (PDF)</span></button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="veleprodaja">
+  <div class="wrap whole">
+    <div>
+      <p class="eyebrow"><span class="sr">Veleprodaja</span><span class="en">Wholesale</span></p>
+      <h2 style="margin-top:10px"><span class="sr">Snabdevamo Beograd i veće gradove Srbije</span><span class="en">Supplying Belgrade and Serbia's major cities</span></h2>
+      <div class="cities"><span class="main">Beograd</span><span>Novi Sad</span><span>Niš</span><span>Kragujevac</span><span>Subotica</span><span>Čačak</span></div>
+      <div class="who">
+        <div><span class="sr">Trgovinski lanci, delikates program i privatne robne marke</span><span class="en">Retail chains, deli programme and private label</span></div>
+        <div><span class="sr">Restorani i hoteli (HoReCa)</span><span class="en">Restaurants and hotels (HoReCa)</span></div>
+        <div><span class="sr">Ribarnice, uključujući naše sopstvene ribarnice i fish barove</span><span class="en">Fishmongers, including our own fish shops and fish bars</span></div>
+        <div><span class="sr">Tržišta regiona bivše Jugoslavije</span><span class="en">Markets across the former Yugoslavia</span></div>
+      </div>
+    </div>
+    <form id="lead" novalidate>
+      <div class="two">
+        <label for="f-name"><span class="sr">Ime i prezime</span><span class="en">Full name</span><input id="f-name" value="Marko Petrović"></label>
+        <label for="f-company"><span class="sr">Firma</span><span class="en">Company</span><input id="f-company" value="Restoran Primer"></label>
+      </div>
+      <div class="two">
+        <label for="f-city"><span class="sr">Grad</span><span class="en">City</span><input id="f-city" value="Beograd"></label>
+        <label for="f-type"><span class="sr">Tip kupca</span><span class="en">Buyer type</span>
+          <select id="f-type"><option>HoReCa</option><option>Ribarnica / Fishmonger</option><option>Lanac / Retail chain</option><option>Distributer</option></select></label>
+      </div>
+      <label for="f-msg"><span class="sr">Šta vas zanima</span><span class="en">What you need</span><textarea id="f-msg">Dimljeni losos 100 g, 2 kartona nedeljno, i ponuda za svežu oradu.</textarea></label>
+      <button class="btn btn-primary" type="submit"><span class="sr">Pošalji upit</span><span class="en">Send enquiry</span></button>
+      <span class="toast" id="form-note" hidden><span class="sr">Primer forme: na pravom sajtu upit stiže prodaji.</span><span class="en">Example form: on the live site this reaches the sales team.</span></span>
+    </form>
+  </div>
+</section>
+
+<section id="o-nama" style="border-top:1px solid var(--line)">
+  <div class="wrap about">
+    <div><p class="eyebrow"><span class="sr">O nama</span><span class="en">About us</span></p><h2 style="margin-top:10px">Ancora Nuova</h2></div>
+    <div class="text">
+      <p><span class="sr">Ancora Nuova d.o.o. Beograd se bavi uvozom, preradom i distribucijom smrznute i sveže ribe i plodova mora, kao i proizvodnjom ribljih delikatesa. Jedna smo od vodećih firmi na srpskom tržištu u ovoj oblasti.</span><span class="en">Ancora Nuova d.o.o. Belgrade imports, processes and distributes frozen and fresh fish and seafood, and produces fish delicacies. We are one of the leading companies in this field on the Serbian market.</span></p>
+      <p><span class="sr">Da bismo sačuvali najbolji mogući kvalitet, svežu ribu iz Italije, Grčke i Norveške dovozimo svake nedelje. Smrznuta riba stiže u kontejnerima-zamrzivačima iz celog sveta. Naše hladnjače primaju 600 tona smrznute i 50 tona sveže ribe i opremljene su najsavremenijom tehnologijom.</span><span class="en">To keep quality as high as possible, we bring in fresh fish from Italy, Greece and Norway every week. Frozen fish arrives in freezer containers from all over the world. Our cold stores hold 600 tonnes of frozen and 50 tonnes of fresh fish and run on up-to-date equipment.</span></p>
+      <p><span class="sr">U sopstvenom pogonu dimimo ribu i proizvodimo riblje specijalitete i plodove mora. Naš strateški proizvod je dimljeni losos, proizveden klasičnim postupkom suvog soljenja, koji mu daje najviši kvalitet. Proizvodimo ga i za privatne robne marke Ledo, Delhaize, Konzum i Mercator.</span><span class="en">In our own plant we smoke fish and produce fish specialities and seafood. Our flagship product is smoked salmon made the classic way, dry-salted, which gives it the highest quality. We also produce it under private label for Ledo, Delhaize, Konzum and Mercator.</span></p>
+      <p><span class="sr">Skladištenje i prerada su pod stalnim nadzorom naših stručnjaka, u skladu sa evropskim zdravstvenim i ekološkim standardima u prehrambenoj industriji, od izbora sirovine do gotovog proizvoda. Imamo HACCP i IFS Food sertifikat (sertifikaciono telo TÜV SÜD Czech).</span><span class="en">Storage and processing are under constant supervision by our specialists, in line with European health and environmental standards for the food industry, from the choice of raw material to the finished product. We hold HACCP and IFS Food certification (certification body TÜV SÜD Czech).</span></p>
+      <p><span class="sr">Savremeni kamioni hladnjače, pod stalnom kontrolom, dovoze ribu u ribarnice i supermarkete širom zemlje i u naše sopstvene fish barove i ribarnice. Redovni smo dobavljač velikih trgovinskih sistema kao što su Delhaize, Tempo, Univer i Aroma, snabdevamo veliki broj restorana i prisutni smo na tržištima bivše Jugoslavije.</span><span class="en">Modern, constantly monitored refrigerated trucks deliver fish to fishmongers and supermarkets across the country and to our own fish bars and fish shops. We are a regular supplier to major retail groups such as Delhaize, Tempo, Univer and Aroma, supply many restaurants, and sell across the former Yugoslavia.</span></p>
+      <p class="motto"><span class="sr">Kvalitet, cena, sigurnost i brzina isporuke su osnova našeg poslovanja. Cilj nam je da postanemo regionalni lider u preradi ribe.</span><span class="en">Quality, price, safety and speed of delivery are the basis of our business. Our goal is to become the regional leader in fish processing.</span></p>
+      <div class="facts-row">
+        <div><b>150 t</b><span><span class="sr">dimljene ribe godišnje</span><span class="en">smoked fish a year</span></span></div>
+        <div><b>300 t</b><span><span class="sr">pakovane ribe godišnje</span><span class="en">packed fish a year</span></span></div>
+        <div><b>650 t</b><span><span class="sr">kapacitet hladnjača</span><span class="en">cold storage capacity</span></span></div>
+        <div><b>IFS</b><span><span class="sr">Food sertifikat i HACCP</span><span class="en">Food certificate and HACCP</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tehnologija" class="catalog">
+  <div class="wrap">
+    <div class="head"><div><p class="eyebrow"><span class="sr">Pakovanje</span><span class="en">Packaging</span></p><h2 style="margin-top:10px"><span class="sr">Tehnologija koja čuva svežinu</span><span class="en">Technology that keeps fish fresh</span></h2></div><p><span class="sr">Godišnje upakujemo 300 t ribe.</span><span class="en">We pack 300 t of fish a year.</span></p></div>
+    <div class="tech"><div><h3>DAR Fresh</h3><p><span class="sr">Čuva izvorni izgled proizvoda, štiti ga od spoljnih uticaja i produžava svežinu.</span><span class="en">Keeps the product looking as it should, protects it from outside effects and extends freshness.</span></p></div><div><h3>MAP</h3><p><span class="sr">Pakovanje u modifikovanoj atmosferi koje čuva ukus i svežinu proizvoda.</span><span class="en">Modified-atmosphere packing that preserves taste and freshness.</span></p></div><div><h3><span class="sr">Vakuum</span><span class="en">Vacuum</span></h3><p><span class="sr">Vakuumsko pakovanje sveže i smrznute ribe.</span><span class="en">Vacuum packing for fresh and frozen fish.</span></p></div></div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="eyebrow"><span class="sr">Kontakt</span><span class="en">Contact</span></p><h2 style="margin-top:10px"><span class="sr">Pozovite nas</span><span class="en">Get in touch</span></h2></div>
+      <p><span class="sr">Za veleprodaju, trgovinske lance i restorane.</span><span class="en">For wholesale, retail chains and restaurants.</span></p>
+    </div>
+    <div class="phones">
+      <div class="phone"><span class="mono"><span class="sr">TELEFON</span><span class="en">PHONE</span></span><span class="num">+381 11 310 92 00</span></div>
+      <div class="phone"><span class="mono">EMAIL</span><span class="num" style="font-size:clamp(1.3rem,2.4vw,1.7rem)">office@ancoranuova.rs</span></div>
+      <div class="phone"><span class="mono"><span class="sr">ADRESA</span><span class="en">ADDRESS</span></span><span class="num" style="font-size:clamp(1.3rem,2.4vw,1.7rem)">Mokranjčeva 4, Dobanovci</span><span class="mono">Beograd, Srbija</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Ancora Nuova d.o.o.</span>
+    <span><span class="sr">Dimljeni losos · svež norveški losos · orada i brancin · smrznuti plodovi mora · veleprodaja Beograd</span><span class="en">Smoked salmon · fresh Norwegian salmon · sea bream &amp; bass · frozen seafood · wholesale Belgrade</span></span>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+  var site=document.getElementById('site'),sr=document.getElementById('btn-sr'),en=document.getElementById('btn-en');
+  function set(l){
+    site.classList.toggle('en',l==='en');
+    document.documentElement.lang=l==='en'?'en':'sr';
+    sr.setAttribute('aria-pressed',l!=='en');en.setAttribute('aria-pressed',l==='en');
+    try{localStorage.setItem('an-lang',l)}catch(e){}
+  }
+  var start='sr';
+  if(location.hash==='#en')start='en';
+  else{try{start=localStorage.getItem('an-lang')||'sr'}catch(e){}}
+  set(start);
+  sr.addEventListener('click',function(){set('sr')});
+  en.addEventListener('click',function(){set('en')});
+  document.getElementById('pdf-btn').addEventListener('click',function(){document.getElementById('pdf-note').hidden=false});
+  document.getElementById('lead').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-note').hidden=false});
+})();
+</script>
+
+</body>
+</html>
